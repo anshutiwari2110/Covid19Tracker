@@ -4,236 +4,256 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
     tools:context="ui.DashboardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <!-- CardView for Total Cases -->
+        <!-- CardView -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#938E8E"
+                android:background="@drawable/bg_cardview"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="50dp">
+                <!-- For menu and notification button -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_action_drawer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_menu" />
+
+                    <ImageView
+                        android:id="@+id/iv_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_notification" />
+
+                </RelativeLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Cases : "
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/covid_19"
                     android:textColor="#ffffff"
-                    android:textSize="20sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_total_case_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#ffffff" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Total Test done : "
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/home_question"
                     android:textColor="#ffffff"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_total_test_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#ffffff" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Total Critical Cases : "
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/sick_symptoms"
                     android:textColor="#ffffff"
-                    android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tv_total_critical_no"
-                    android:layout_width="wrap_content"
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#ffffff" />
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_call_button"
+                        android:padding="10dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_call" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/callNow"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_send_sms_button"
+                        android:padding="10dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_message_circle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/sendSMS"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView for Active Cases -->
-        <androidx.cardview.widget.CardView
-            android:layout_marginTop="20dp"
+        <!-- Prevention -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Prevention"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_margin="10dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Active Cases : "
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_active_case_no"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_prevention3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Wear a \nface mask"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#000000" />
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_prevention2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Clean your\n hand often"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_social_distancing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Active Cases Increased : "
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_active_case_inc_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_prevention1" />
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Avoid close \n contact"
+                        android:textColor="#000000" />
+                </LinearLayout>
 
-        <!-- CardView for Recovered Cases -->
-        <androidx.cardview.widget.CardView
-            android:layout_marginTop="20dp"
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_testbanner" />
+        </LinearLayout>
+
+        <!-- Statistics -->
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/stat_button"
+            android:elevation="8dp"
+            android:paddingStart="20dp"
+            android:onClick="moveStateStats"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-black"
+                android:text="See Statistics"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Recovered Cases : "
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_recovered_case_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Recovered Cases Increased : "
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_recovered_case_inc_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#000000" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- CardView for Death Cases -->
-        <androidx.cardview.widget.CardView
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Death Cases : "
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_death_case_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Death Cases Increased : "
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_death_case_inc_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:textColor="#000000" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_forward" />
+        </RelativeLayout>
 
     </LinearLayout>
-
 
 </ScrollView>

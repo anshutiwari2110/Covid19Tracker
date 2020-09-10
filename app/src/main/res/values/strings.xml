@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Covid19Tracker</string>
+
+    <!-- Strings used in home screen -->
+    <string name="covid_19">COVID-19</string>
+    <string name="home_question">Are you feeling sick?</string>
+    <string name="sick_symptoms">If you feel sick with any of COVID-19 symptoms,\n Please call or SMS us immediately for help.</string>
+    <string name="callNow">Call Now</string>
+    <string name="sendSMS">Send SMS</string>
 </resources>
