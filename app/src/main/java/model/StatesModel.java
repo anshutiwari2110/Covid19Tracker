@@ -2,16 +2,53 @@ package model;
 
 public class StatesModel {
     private String stateName,stateCases,stateDeath,stateRecovered,stateActive;
+    private String incStateDeath,incStateRecovered, incStateConfirmed,lastUpdated;
 
-    public StatesModel() {
-    }
-
-    public StatesModel(String stateName, String stateCases, String stateDeath, String stateRecovered,String stateActive) {
+    public StatesModel(String stateName, String stateCases, String stateDeath, String stateRecovered, String stateActive, String incStateDeath, String incStateRecovered, String incStateConfirmed,String lastUpdated) {
         this.stateName = stateName;
         this.stateCases = stateCases;
         this.stateDeath = stateDeath;
         this.stateRecovered = stateRecovered;
         this.stateActive = stateActive;
+        this.incStateDeath = incStateDeath;
+        this.incStateRecovered = incStateRecovered;
+        this.incStateConfirmed = incStateConfirmed;
+        this.lastUpdated = lastUpdated;
+    }
+    public StatesModel(){
+
+    }
+
+    public String getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(String lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
+
+    public String getIncStateDeath() {
+        return incStateDeath;
+    }
+
+    public void setIncStateDeath(String incStateDeath) {
+        this.incStateDeath = incStateDeath;
+    }
+
+    public String getIncStateRecovered() {
+        return incStateRecovered;
+    }
+
+    public void setIncStateRecovered(String incStateRecovered) {
+        this.incStateRecovered = incStateRecovered;
+    }
+
+    public String getIncStateConfirmed() {
+        return incStateConfirmed;
+    }
+
+    public void setIncStateConfirmed(String incStateConfirmed) {
+        this.incStateConfirmed = incStateConfirmed;
     }
 
     public String getStateName() {

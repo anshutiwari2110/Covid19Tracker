@@ -35,38 +35,44 @@ public class StateStatistcActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_state_statistc);
-
+        mRcStatesStat = findViewById(R.id.rc_states_stats);
         getStatesStats();
 
     }
 
     private void getStatesStats() {
         RequestQueue queue = Volley.newRequestQueue(StateStatistcActivity.this);
-        String url = "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true";
+        String url = "https://api.covid19india.org/data.json";
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    JSONArray jsonArray = jsonObject.getJSONArray("regionData");
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        StatesModel statesModel = new StatesModel();
-                        JSONObject object = jsonArray.getJSONObject(i);
-                        statesModel.setStateName(object.optString("region"));
-                        statesModel.setStateActive(object.optString("newInfected"));
-                        statesModel.setStateRecovered(object.optString("recovered"));
-                        statesModel.setStateDeath(object.optString("deceased"));
-                        statesModel.setStateCases(object.optString("totalInfected"));
-                        statesModels.add(statesModel);
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        JSONArray jsonArray = jsonObject.getJSONArray("statewise");
+                        for (int i = 1; i < jsonArray.length(); i++) {
+
+                            StatesModel statesModel = new StatesModel();
+                            JSONObject object = jsonArray.getJSONObject(i);
+                            statesModel.setStateName(object.optString("state"));
+                            statesModel.setStateActive(object.optString("active"));
+                            statesModel.setStateRecovered(object.optString("recovered"));
+                            statesModel.setStateDeath(object.optString("deaths"));
+                            statesModel.setStateCases(object.optString("confirmed"));
+//                            statesModel.setIncStateConfirmed(object.optString("deltaconfirmed"));
+//                            statesModel.setIncStateDeath(object.optString("deltadeaths"));
+//                            statesModel.setIncStateRecovered(object.optString("deltarecovered"));
+                            statesModel.setLastUpdated(object.optString("lastupdatedtime"));
+                            statesModels.add(statesModel);
+                        }
+
+                        mRcStatesStat.setLayoutManager(new LinearLayoutManager(StateStatistcActivity.this, RecyclerView.VERTICAL, false));
+                        stateAdapter = new StateAdapter(StateStatistcActivity.this, statesModels);
+                        mRcStatesStat.setAdapter(stateAdapter);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-
-                    mRcStatesStat.setLayoutManager(new LinearLayoutManager(StateStatistcActivity.this,RecyclerView.VERTICAL,false));
-                    stateAdapter = new StateAdapter(StateStatistcActivity.this, statesModels);
-                    mRcStatesStat.setAdapter(stateAdapter);
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
             }
         }, new Response.ErrorListener() {

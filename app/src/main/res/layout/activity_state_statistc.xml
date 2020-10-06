@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context="ui.StateStatistcActivity">
 
@@ -11,16 +12,18 @@
         android:id="@+id/tv_states_stat_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="States Statistics "
-        android:textSize="30sp"
+        android:fontFamily="@font/almendra_bold_italic"
         android:gravity="center"
-        android:fontFamily="sans-serif-black"/>
+        android:text="States Statistics "
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_states_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tv_states_stat_heading"
         android:layout_marginTop="10dp"
-        tools:listitem="@layout/cell_states_stats"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        tools:listitem="@layout/cell_states_stats" />
 
 </RelativeLayout>

@@ -37,10 +37,14 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.StateHolder>
 
         if (currentModel!= null){
             holder.mTvStateName.setText(currentModel.getStateName());
-            holder.mTvStateConfirmed.setText(currentModel.getStateCases());
+            holder.mTvStateConfirmed.setText(currentModel.getStateActive());
             holder.mTvStateDeath.setText(currentModel.getStateDeath());
             holder.mTvStateRecovered.setText(currentModel.getStateRecovered());
-            holder.mTvStateActive.setText(currentModel.getStateActive());
+            holder.mTvStateActive.setText(currentModel.getStateCases());
+            holder.mTvLastUpdated.setText("Last Updated Time: "+currentModel.getLastUpdated()+" IST");
+//            holder.mTvIncStatesConfirmed.setText(" [+" + currentModel.getIncStateConfirmed() + " ]");
+//            holder.mTvIncStateDeath.setText(" [+" + currentModel.getIncStateDeath() + " ]");
+//            holder.mTvIncStatesRecovered.setText("[+" +currentModel.getIncStateRecovered()+" ]");
         }
 
     }
@@ -56,6 +60,10 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.StateHolder>
         private TextView mTvStateDeath;
         private TextView mTvStateRecovered;
         private TextView mTvStateName;
+        private TextView mTvIncStateDeath;
+        private TextView mTvIncStatesConfirmed;
+        private TextView mTvIncStatesRecovered;
+        private TextView mTvLastUpdated;
         public StateHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -64,6 +72,10 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.StateHolder>
             mTvStateDeath = itemView.findViewById(R.id.tv_state_death);
             mTvStateRecovered = itemView.findViewById(R.id.tv_state_recovered);
             mTvStateName = itemView.findViewById(R.id.tv_states_name);
+//            mTvIncStatesConfirmed = itemView.findViewById(R.id.tv_inc_state_confirmed);
+//            mTvIncStateDeath = itemView.findViewById(R.id.tv_inc_state_death);
+//            mTvIncStatesRecovered = itemView.findViewById(R.id.tv_inc_state_recovered);
+            mTvLastUpdated = itemView.findViewById(R.id.tv_last_updated);
         }
     }
 }

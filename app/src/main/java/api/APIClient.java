@@ -22,7 +22,7 @@ public class APIClient {
                 .writeTimeout(30,TimeUnit.SECONDS)          // ping server to timeout if not get readable content in 30 seconds
                 .addInterceptor(loggingInterceptor).build();        // to display the log interceptor in logcat
 
-        retrofit = new Retrofit.Builder().baseUrl("https://corona.lmao.ninja/").addConverterFactory(GsonConverterFactory.create()).client(client).build();
+        retrofit = new Retrofit.Builder().baseUrl("https://api.apify.com/").addConverterFactory(GsonConverterFactory.create()).client(client).build();
         return retrofit;
 
     }

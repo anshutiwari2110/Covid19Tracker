@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/list_medical_college"
+        android:title="Medical Colleges list in States"
+        android:icon="@drawable/covid_medical_college"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/hospital_bed_list"
+        android:title="Hospital Beds in States"
+        android:icon="@drawable/covid_hospital_bed"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/state_helpline_no"
+        android:title="States Helpline"
+        android:icon="@drawable/covid_helpline"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/about_us"
+        android:title="About Us"
+        android:icon="@drawable/covid_about_us"
+        app:showAsAction="always"/>
+
+</menu>

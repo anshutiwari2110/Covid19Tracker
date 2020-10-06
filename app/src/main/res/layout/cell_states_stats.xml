@@ -17,16 +17,18 @@
             android:id="@+id/tv_states_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="@font/almendra_bold_italic"
             android:gravity="center"
             android:text="State Name"
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:padding="20dp">
+            android:layout_marginEnd="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -38,16 +40,18 @@
                     android:id="@+id/tv_state_confirmed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:fontFamily="sans-serif-black"
                     android:text="9999999"
-                    android:textSize="20sp" />
+                    android:textColor="#0000ff" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Confirmed"
-                    android:textSize="18sp" />
+                    android:text="Active Cases"
+                    android:textColor="#0000ff" />
             </LinearLayout>
 
             <LinearLayout
@@ -57,21 +61,39 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <TextView
-                    android:id="@+id/tv_state_active"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
-                    android:text="9999999"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_state_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-black"
+                        android:text="9999999"
+                        android:textColor="#484859" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_inc_state_confirmed"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_toEndOf="@+id/tv_state_active"-->
+<!--                        android:fontFamily="sans-serif-black"-->
+<!--                        android:text="[+99999]"-->
+<!--                        android:textColor="#484859" />-->
+                </RelativeLayout>
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Active"
-                    android:textSize="18sp" />
+                    android:text="Confirmed Cases"
+                    android:textColor="#484859" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -79,8 +101,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:padding="20dp">
+            android:layout_marginEnd="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -88,21 +111,37 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <TextView
-                    android:id="@+id/tv_state_death"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
-                    android:text="9999999"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_state_death"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-black"
+                        android:text="9999999"
+                        android:textColor="#ff0000" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_inc_state_death"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_toEndOf="@+id/tv_state_death"-->
+<!--                        android:fontFamily="sans-serif-black"-->
+<!--                        android:text="[+9999]"-->
+<!--                        android:textColor="#ff0000" />-->
+
+                </RelativeLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="Death"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="18sp" />
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Death Cases" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,24 +151,51 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <TextView
-                    android:id="@+id/tv_state_recovered"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
-                    android:text="9999999"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_state_recovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-black"
+                        android:text="9999999"
+                        android:textColor="#00ff00" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_inc_state_recovered"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_toEndOf="@+id/tv_state_recovered"-->
+<!--                        android:fontFamily="sans-serif-black"-->
+<!--                        android:text="[+99999]"-->
+<!--                        android:textColor="#00ff00" />-->
+
+                </RelativeLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Recovered"
-                    android:textSize="18sp" />
+                    android:text="Recovered Cases" />
             </LinearLayout>
 
         </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_last_updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="italic"
+            android:text="Last Updated Time"
+
+             />
 
     </LinearLayout>
 

@@ -7,4 +7,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="navigationTheme">
+
+        <!-- Color of text and icon when selected -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Background color when selected -->
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
 </resources>

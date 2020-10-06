@@ -1,12 +1,11 @@
 package api;
 
-import model.CountryModel;
 import model.Result;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface API_Interface {
 
-    @GET("/v2/countries/india")
+    @GET("/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true")
     Call<Result> getTotalOfIndia();
 }

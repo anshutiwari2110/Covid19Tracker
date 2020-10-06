@@ -36,6 +36,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    implementation 'com.airbnb.android:lottie:3.4.2'                        //Implementing Lottie animation
+
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'                //Implementing retrofit
  //   implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'       //Implementing scalar converter
     implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'       //Implementing logging interceptor
