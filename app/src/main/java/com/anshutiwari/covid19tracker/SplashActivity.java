@@ -13,7 +13,7 @@ import ui.DashboardActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME = 5500;
+    private static int SPLASH_TIME = 5000;
     LottieAnimationView mLotIcon;
     LottieAnimationView mLotStaySafe;
     TextView mTvAppName;
@@ -26,9 +26,9 @@ public class SplashActivity extends AppCompatActivity {
         mLotIcon = findViewById(R.id.lottie_covid);
         mLotStaySafe = findViewById(R.id.lottie_stay_safe);
 
-        mLotIcon.animate().translationY(1600).setDuration(1000).setStartDelay(4000);
-        mLotStaySafe.animate().translationY(1600).setDuration(1000).setStartDelay(4000);
-        mTvAppName.animate().translationY(1600).setDuration(1000).setStartDelay(4000);
+        mLotIcon.animate().translationY(3000).setDuration(1000).setStartDelay(4000);
+        mLotStaySafe.animate().translationY(3000).setDuration(1000).setStartDelay(4000);
+        mTvAppName.animate().translationY(3000).setDuration(1000).setStartDelay(4000);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
