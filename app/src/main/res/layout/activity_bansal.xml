@@ -8,6 +8,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text=" Good Morning!!!"
+        android:text=" Good Morning!!! 11:pm"
         android:textSize="45sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
