@@ -12,8 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".bansal"></activity>
         <activity android:name="ui.StateStatistcActivity" />
-        <activity android:name="ui.DashboardActivity"></activity>
+        <activity android:name="ui.DashboardActivity" />
         <activity android:name="ui.StatisticsActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
