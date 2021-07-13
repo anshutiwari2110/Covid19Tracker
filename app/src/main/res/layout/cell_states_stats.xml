@@ -62,28 +62,29 @@
                 android:padding="10dp">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tv_state_active"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-black"
                         android:text="9999999"
+                        android:gravity="center"
                         android:textColor="#484859" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/tv_inc_state_confirmed"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_marginStart="5dp"-->
-<!--                        android:layout_toEndOf="@+id/tv_state_active"-->
-<!--                        android:fontFamily="sans-serif-black"-->
-<!--                        android:text="[+99999]"-->
-<!--                        android:textColor="#484859" />-->
+                   <!-- <TextView
+                        android:id="@+id/tv_inc_state_confirmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/tv_state_active"
+                        android:fontFamily="sans-serif-black"
+                        android:text="[+99999]"
+                        android:textColor="#484859" />-->
                 </RelativeLayout>
 
 
@@ -112,27 +113,28 @@
                 android:padding="10dp">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tv_state_death"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="sans-serif-black"
                         android:text="9999999"
+                        android:gravity="center"
                         android:textColor="#ff0000" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/tv_inc_state_death"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_toEndOf="@+id/tv_state_death"-->
-<!--                        android:fontFamily="sans-serif-black"-->
-<!--                        android:text="[+9999]"-->
-<!--                        android:textColor="#ff0000" />-->
+                    <!--<TextView
+                        android:id="@+id/tv_inc_state_death"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@+id/tv_state_death"
+                        android:fontFamily="sans-serif-black"
+                        android:text="[+9999]"
+                        android:textColor="#ff0000" />-->
 
                 </RelativeLayout>
 
@@ -152,27 +154,28 @@
                 android:padding="10dp">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tv_state_recovered"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-black"
                         android:text="9999999"
+                        android:gravity="center"
                         android:textColor="#00ff00" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/tv_inc_state_recovered"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_toEndOf="@+id/tv_state_recovered"-->
-<!--                        android:fontFamily="sans-serif-black"-->
-<!--                        android:text="[+99999]"-->
-<!--                        android:textColor="#00ff00" />-->
+                    <!--<TextView
+                        android:id="@+id/tv_inc_state_recovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@+id/tv_state_recovered"
+                        android:fontFamily="sans-serif-black"
+                        android:text="[+99999]"
+                        android:textColor="#00ff00" />-->
 
                 </RelativeLayout>
 
@@ -185,6 +188,64 @@
             </LinearLayout>
 
         </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/Black"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_hospital_beds">
+            <TextView
+                android:id="@+id/tv_hospital_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For beds availaibility details."
+                android:textStyle="bold"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_toEndOf="@+id/tv_hospital_head"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:textColor="#0000ff"
+                android:text="Click Here"
+                android:id="@+id/iv_hospital_bed" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/Black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ll_whatsapp_bot">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/iv_whatsapp_bot"
+                android:src="@drawable/whatsapp_chatbot"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Send a 'Hi' on below given whatsapp contact for more details"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/Black"/>
 
         <TextView
             android:layout_marginTop="10dp"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context=".SplashActivity">
@@ -25,7 +26,7 @@
         android:fontFamily="@font/almendra_bold_italic"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
-        android:text="COVID Tracker"
+        android:text="COVID-Warn"
         android:gravity="center"
         android:id="@+id/tv_app_name"
         android:textSize="34sp"
@@ -33,8 +34,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_stay_safe"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"

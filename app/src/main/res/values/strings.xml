@@ -7,4 +7,6 @@
     <string name="sick_symptoms">If you feel sick with any of COVID-19 symptoms,\n Please call or SMS us immediately for help.</string>
     <string name="callNow">Call Now</string>
     <string name="sendSMS">Send SMS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

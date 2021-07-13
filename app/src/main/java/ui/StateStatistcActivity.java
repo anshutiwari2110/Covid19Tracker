@@ -59,9 +59,9 @@ public class StateStatistcActivity extends AppCompatActivity {
                             statesModel.setStateRecovered(object.optString("recovered"));
                             statesModel.setStateDeath(object.optString("deaths"));
                             statesModel.setStateCases(object.optString("confirmed"));
-//                            statesModel.setIncStateConfirmed(object.optString("deltaconfirmed"));
-//                            statesModel.setIncStateDeath(object.optString("deltadeaths"));
-//                            statesModel.setIncStateRecovered(object.optString("deltarecovered"));
+/*                            statesModel.setIncStateConfirmed(object.optString("deltaconfirmed"));
+                            statesModel.setIncStateDeath(object.optString("deltadeaths"));
+                            statesModel.setIncStateRecovered(object.optString("deltarecovered"));*/
                             statesModel.setLastUpdated(object.optString("lastupdatedtime"));
                             statesModels.add(statesModel);
                         }

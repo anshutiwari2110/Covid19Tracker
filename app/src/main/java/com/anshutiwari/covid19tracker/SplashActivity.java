@@ -3,6 +3,7 @@ package com.anshutiwari.covid19tracker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import com.airbnb.lottie.LottieAnimationView;
 
 import ui.DashboardActivity;
+import ui.OnBoardActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -17,6 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     LottieAnimationView mLotIcon;
     LottieAnimationView mLotStaySafe;
     TextView mTvAppName;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +35,20 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
-                finish();
+
+                sharedPreferences = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
+
+                boolean isFirstTime = sharedPreferences.getBoolean("firstTime", true);
+                if (isFirstTime) {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("firstTime",false);
+                    editor.commit();
+                    startActivity(new Intent(SplashActivity.this, OnBoardActivity.class));
+                    finish();
+                }else{
+                    startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
+                    finish();
+                }
             }
         },SPLASH_TIME);
     }

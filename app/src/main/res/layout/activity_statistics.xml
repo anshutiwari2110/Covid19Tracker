@@ -43,7 +43,6 @@
                 android:textStyle="bold" />
 
 
-
         </RelativeLayout>
         <!-- For INDIA textView -->
         <RelativeLayout
@@ -77,6 +76,27 @@
 
         </RelativeLayout>
         <!-- Card View of total stats-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart_stats"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:padding="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -228,6 +248,70 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daily Confirmed and Recoverd Cases"
+                android:textStyle="bold"
+                android:fontFamily="@font/acme"
+                android:textSize="18sp"
+                android:textColor="#ffffff"/>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daily Death Cases"
+                android:textStyle="bold"
+                android:fontFamily="@font/acme"
+                android:textSize="18sp"
+                android:textColor="#ffffff"/>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart_death"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"/>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -403,52 +487,12 @@
                         android:layout_toEndOf="@+id/iv_positivity_rate"
                         android:fontFamily="@font/acme"
                         android:paddingStart="20dp"
-                        android:text="Tests Positivity Rate"
+                        android:text="Total RT-PCR Test"
                         android:textColor="#000000"
                         android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/tv_positivity_rate"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="20dp"
-                        android:fontFamily="@font/acme"
-                        android:textColor="#000000"
-                        android:textSize="20sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/border_black_text_view"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="15dp"
-                    android:paddingBottom="5dp">
-
-                    <ImageView
-                        android:id="@+id/iv_test_per_million"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/covid_test_per_million" />
-
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_toStartOf="@+id/tv_test_per_million"
-                        android:layout_toEndOf="@+id/iv_test_per_million"
-                        android:fontFamily="@font/acme"
-                        android:paddingStart="20dp"
-                        android:text="Tests Per Millions"
-                        android:textColor="#000000"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/tv_test_per_million"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
